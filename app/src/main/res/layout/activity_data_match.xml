@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inspection.DataMatch"
+    android:background="@drawable/ic_extended_screen_background">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATA MATCH"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/raleway_bold"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:text="Package slip, PO, Datasheet, \n Customer PO all match"
+            android:textAlignment="center"
+            android:textSize="@dimen/_12sdp" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Does the part label match part number \n per packing slip and PO of Summon Electronics?"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+
+                <RadioGroup
+                    android:id="@+id/match_part_number_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:text="@string/part_number"
+                    android:textAllCaps="true">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:gravity="center"
+                        android:text="@string/no"
+                        android:textSize="@dimen/_10sdp" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true">
+                <EditText
+                    android:id="@+id/et_match_part_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/shape_bg_edittext"
+                    android:fontFamily="@font/raleway"
+                    android:hint="@string/if_no_please_specify_here_for_approval"
+                    android:padding="10dp"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/text_size"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/count_matches_the_packing_slip_and_summon_electronics_po"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+
+                <RadioGroup
+                    android:id="@+id/match_slip_po_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:text="@string/part_number"
+                    android:textAllCaps="true">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:gravity="center"
+                        android:text="@string/no"
+                        android:textSize="@dimen/_10sdp" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true">
+            <EditText
+                android:id="@+id/et_match_slip_po"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/shape_bg_edittext"
+                android:fontFamily="@font/raleway"
+                android:hint="@string/if_no_please_specify_here_for_approval"
+                android:padding="10dp"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_size"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/damage_of_any_box_container_part_container_mfg_packaging"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+
+                <RadioGroup
+                    android:id="@+id/damage_packing_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:text="@string/part_number"
+                    android:textAllCaps="true">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:gravity="center"
+                        android:text="@string/no"
+                        android:textSize="@dimen/_10sdp" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true">
+            <EditText
+                android:id="@+id/et_damage_packing"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/shape_bg_edittext"
+                android:fontFamily="@font/raleway"
+                android:hint="@string/if_no_please_specify_here_for_approval"
+                android:padding="10dp"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_size"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_nxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="46dp"
+            android:background="@drawable/btn_gradient_drawable"
+            android:paddingLeft="140dp"
+            android:paddingTop="10dp"
+            android:paddingRight="140dp"
+            android:paddingBottom="10dp"
+            android:text="NEXT STEP"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    </ScrollView>`
+</LinearLayout>

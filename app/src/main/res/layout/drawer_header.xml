@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_120sdp"
+    android:orientation="vertical"
+
+    android:background="@color/background">
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:drawableEnd="@drawable/ic_down_arrow"
+        android:fontFamily="@font/raleway_bold"
+        android:text="John Comunale"
+        android:textColor="@color/color_blue"
+        android:textSize="@dimen/_15sdp" />
+
+    <TextView
+        android:id="@+id/user_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:fontFamily="@font/raleway"
+        android:text="johncomunale@gmail.com"
+        android:textColor="@color/color_blue" />
+
+
+</LinearLayout>

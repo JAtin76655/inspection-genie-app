@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HighValuePartInspection"
+    android:background="@drawable/ic_extended_screen_background"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post-Inspection Processing"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"/>
+    <TextView
+        android:id="@+id/textViewTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Outbound Shipping Location"
+        android:layout_below="@id/textViewTitle"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/_20sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle2"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@color/table_header"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/customer_store"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- RadioGroup and RadioButtons go here -->
+            <RadioGroup
+                android:id="@+id/customer_store_radio_group"
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="@string/part_number"
+                android:textAllCaps="true">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/yes"
+                    android:textSize="@dimen/_10sdp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="@string/no"
+                    android:textSize="@dimen/_10sdp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rack:"
+                android:layout_margin="@dimen/_10sdp"
+                android:textSize="@dimen/_20sdp"/>
+
+            <EditText
+                android:id="@+id/et_rack"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:hint="_____________"
+                android:drawableEnd="@drawable/ic_edit"
+                android:background="@drawable/shape_bg_edittext"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shelf:"
+                android:layout_margin="@dimen/_10sdp"
+                android:textSize="@dimen/_20sdp"/>
+
+            <EditText
+                android:id="@+id/et_shelf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:hint="_____________"
+                android:drawableEnd="@drawable/ic_edit"
+                android:background="@drawable/shape_bg_edittext"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_nxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="49dp"
+        android:background="@drawable/btn_gradient_drawable"
+        android:gravity="center_horizontal"
+        android:paddingLeft="140dp"
+        android:paddingTop="10dp"
+        android:paddingRight="140dp"
+        android:paddingBottom="10dp"
+        android:text="NEXT STEP"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Inspection.PageFragments.HomeFragment"
+    android:background="@drawable/ic_extended_screen_background">
+
+
+   <ImageView
+       android:id="@+id/imageView"
+       android:layout_width="@dimen/_250sdp"
+       android:layout_height="@dimen/_50sdp"
+       android:src="@drawable/inspection_genie"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.046" />
+
+
+   <ImageView
+       android:id="@+id/scan_barcode"
+       android:layout_width="154dp"
+       android:layout_height="117dp"
+       android:layout_gravity="center"
+       android:src="@drawable/qr_code"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/imageView"
+       app:layout_constraintVertical_bias="0.073" />
+
+   <TextView
+       android:id="@+id/textView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="@dimen/_15sdp"
+       android:text="If the QR Code is Unavailable \nPlease use search button"
+       android:textAlignment="center"
+       android:textSize="@dimen/_10sdp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.911" />
+
+   <View
+       android:id="@+id/view"
+       android:layout_width="350dp"
+       android:layout_height="120dp"
+       android:background="@color/white"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.491"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.462" />
+
+   <EditText
+       android:layout_width="280dp"
+       android:layout_height="50dp"
+       android:id="@+id/manualSearchData"
+       android:hint="PO Number"
+       android:paddingRight="10dp"
+       android:paddingLeft="10dp"
+       android:background="@color/transprent_80"
+       app:layout_constraintBottom_toBottomOf="@+id/view"
+       app:layout_constraintEnd_toEndOf="@+id/view"
+       app:layout_constraintHorizontal_bias="0.185"
+       app:layout_constraintStart_toStartOf="@+id/view"
+       app:layout_constraintTop_toTopOf="@+id/view"
+       app:layout_constraintVertical_bias="0.471" />
+
+   <androidx.appcompat.widget.AppCompatButton
+       android:id="@+id/manualSearch"
+       android:layout_width="280dp"
+       android:layout_height="50dp"
+       android:background="@color/blue_btn_bg_color"
+       android:text="Next"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/view" />
+
+   <!-- <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/manual_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_gradient_drawable_radius_less"
+        android:paddingLeft="140dp"
+        android:paddingTop="16dp"
+        android:paddingRight="140dp"
+        android:paddingBottom="16dp"
+        android:text="SEARCH"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" /> -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

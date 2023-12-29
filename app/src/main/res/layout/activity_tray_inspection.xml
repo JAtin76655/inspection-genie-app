@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_extended_screen_background"
+    tools:context=".Inspection.TrayInspectionActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="TRAY INSPECTION"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:fontFamily="@font/raleway_bold"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:padding="10dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                app:cardUseCompatPadding="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="@color/table_header"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="are the tray aligned and banded properly?"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="218dp"
+                            android:layout_height="85dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/tray_banded_radio_group"
+                                android:layout_width="201dp"
+                                android:layout_height="37dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:text="@string/part_number"
+                                android:textAllCaps="true">
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/yes"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="20dp"
+                                    android:gravity="center"
+                                    android:text="@string/no"
+                                    android:textSize="@dimen/_10sdp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/tray_banded_image"
+                            android:layout_width="111dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                app:cardUseCompatPadding="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="@color/table_header"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="is there a cover trays?\n(if the cover tray is cardboard, verify it is antistatic.)"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="218dp"
+                            android:layout_height="85dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/tray_cover_radio_group"
+                                android:layout_width="201dp"
+                                android:layout_height="37dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:text="@string/part_number"
+                                android:textAllCaps="true">
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/yes"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="20dp"
+                                    android:gravity="center"
+                                    android:text="@string/no"
+                                    android:textSize="@dimen/_10sdp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/tray_cover_image"
+                            android:layout_width="111dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                app:cardUseCompatPadding="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="@color/table_header"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/are_the_parts_orientation_consistent_in_all_trays"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="218dp"
+                            android:layout_height="85dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/tray_ori_radio_group"
+                                android:layout_width="201dp"
+                                android:layout_height="37dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:text="@string/part_number"
+                                android:textAllCaps="true">
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/yes"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="20dp"
+                                    android:gravity="center"
+                                    android:text="@string/no"
+                                    android:textSize="@dimen/_10sdp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/tray_ori_image"
+                            android:layout_width="111dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                app:cardUseCompatPadding="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="@color/table_header"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="are there any missing or damaged chips in the tray?"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="218dp"
+                            android:layout_height="85dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/tray_missing_chips_radio_group"
+                                android:layout_width="201dp"
+                                android:layout_height="37dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:text="@string/part_number"
+                                android:textAllCaps="true">
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/yes"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="20dp"
+                                    android:gravity="center"
+                                    android:text="@string/no"
+                                    android:textSize="@dimen/_10sdp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/tray_missing_chips_image"
+                            android:layout_width="111dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="@color/table_header"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Note the lot code and date code, verify they match the outside packaging or label if there is one to compare with?"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="288dp"
+                            android:layout_height="85dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@color/white"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                           <EditText
+                               android:layout_width="match_parent"
+                               android:layout_height="55dp"
+                               android:id="@+id/et_lot_code"
+                               android:padding="10dp"
+                               android:hint="NOTE HERE"
+                               android:background="@drawable/shape_bg_edittext"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/lot_chips_no_image"
+                            android:layout_width="111dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/how_many_chips_per_mfg_tray_any_partial_trays_if_so_how_many_and_what_count"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="288dp"
+                        android:layout_height="85dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@color/white"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:id="@+id/et_lot_chips_no"
+                            android:padding="10dp"
+                            android:hint="NUMBER"
+                            android:background="@drawable/shape_bg_edittext"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/lot_code_image"
+                            android:layout_width="111dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_nxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="46dp"
+                android:background="@drawable/btn_gradient_drawable"
+                android:paddingLeft="140dp"
+                android:paddingTop="10dp"
+                android:paddingRight="140dp"
+                android:paddingBottom="10dp"
+                android:text="NEXT STEP"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

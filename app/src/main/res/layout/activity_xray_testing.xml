@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inspection.XRayTesting"
+    android:background="@drawable/ic_extended_screen_background"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/x_ray_testing"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@color/table_header"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/how_many_parts_are_inspected"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_qnty_inspected"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:hint="QNTY."
+                android:drawableEnd="@drawable/ic_edit"
+                android:background="@drawable/shape_bg_edittext"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:background="@drawable/shape_btn_bg"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@color/table_header"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/do_any_parts_in_the_inspection_have_defects_n_cracks_scratches_missing_pieces_etc"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp" />
+
+            <!-- RadioGroup and RadioButtons go here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+            <RadioGroup
+                android:id="@+id/inspection_defect_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="@string/part_number"
+                android:textAllCaps="true">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/yes"
+                    android:textSize="@dimen/_10sdp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="@string/no"
+                    android:textSize="@dimen/_10sdp" />
+            </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/inspection_defect_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg_edittext"
+                    android:hint="@string/height_in_inches"
+                    android:src="@drawable/ic_add"
+                    android:textAllCaps="true" />
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_nxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="49dp"
+        android:background="@drawable/btn_gradient_drawable"
+        android:gravity="center_horizontal"
+        android:paddingLeft="140dp"
+        android:paddingTop="10dp"
+        android:paddingRight="140dp"
+        android:paddingBottom="10dp"
+        android:text="NEXT STEP"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+</RelativeLayout>

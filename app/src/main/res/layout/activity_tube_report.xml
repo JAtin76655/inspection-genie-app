@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    android:id="@+id/rp_pdf"
+    tools:context=".Inspection.Tube_report">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/report_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/package_receive_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="RECEIVED PACKAGE IMAGES"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_topView_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/top_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_bottomView_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/bottom_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_leftView_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/left_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_rightView_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/rightview"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_frontView_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="FRONT VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_backView_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="BACK VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/weight_dimension_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="WEIGHT AND DIMENSIONS"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="WEIGHT :"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_weight_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/txt_weight_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="lbs"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="50dp"
+                        android:text="LENGTH :"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_length_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/txt_length_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="in"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="HEIGHT :"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_height_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/txt_height_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="in"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="50dp"
+                        android:text="WIDTH :"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_width_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/txt_width_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="in"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_scaleview_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/scale_weight_picture"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="6sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_measure_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="Package Measurements"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="6sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="PACKAGE SLIP"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_package_slip_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/condition_items_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="CONDITION OF LINE ITEMS"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_topView_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/top_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_bottomView_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/bottom_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_leftView_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/left_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_rightView_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/rightview"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_frontView_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="FRONT VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_backview_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/weight_package" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="BACK VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/manufature_label_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="MANUFACTURER LABEL"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_manufautre_label_pdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:padding="2dp"
+                        android:src="@drawable/weight_package" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/determine_parts_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/determine_parts1_pdf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="DETERMINE PARTS"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dp_mbb_bag_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Do parts come in a MBB/ESD Bag?" />
+
+                    <TextView
+                        android:id="@+id/punctures_bag_radio_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/dp_mbb_bag_pdf"
+                        android:text="YES"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/type_dp_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Please Select" />
+
+                    <TextView
+                        android:id="@+id/type_radio_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/type_dp_pdf"
+                        android:text="TUBE"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dp_puncturebag_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Is there any punctures in bag?" />
+
+                    <TextView
+                        android:id="@+id/puncture_bag_radio_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/dp_puncturebag_pdf"
+                        android:text="YES"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Take picture of bag seal and bag overall"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivBagSealImagePdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+
+                        android:hint="@string/height_in_inches"
+                        android:src="@drawable/ic_add"
+                        android:textAllCaps="true" />
+
+                    <ImageView
+                        android:id="@+id/bag_overall_image_Pdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:hint="@string/height_in_inches"
+                        android:src="@drawable/ic_add"
+                        android:textAllCaps="true"
+                        tools:ignore="DuplicateIds" />
+                </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/determine_parts2_pdf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dp_msl_sticker_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Is there a MSL sticker?" />
+
+                    <TextView
+                        android:id="@+id/msl_sticker_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_below="@+id/dp_msl_sticker_pdf"
+                        android:text="YES"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dp_digi_key_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Is the MSL for the parts correct \nand confirmed
+with the data sheet or Digi-Key?" />
+
+                    <TextView
+                        android:id="@+id/digi_key_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_below="@id/dp_digi_key_pdf"
+                        android:text="YES"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dp_hic_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Is there any HIC card and desiccant?" />
+
+                    <TextView
+                        android:id="@+id/hic_card_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dp_hic_pdf"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="YES"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Open bag take picture of part resting."
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ii_open_bag_pdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+
+                        android:hint="@string/height_in_inches"
+                        android:src="@drawable/ic_add"
+                        android:textAllCaps="true" />
+                </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity=""
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/report_tube">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tube Inspection"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textSize="20dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="Does the manufacturer's name or logo \n appear to be on the tube?"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/logo_tube_radio_group_pdf"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:text="YES"/>
+                        <ImageView
+                            android:id="@+id/logo_tube_imag_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="all tubes are the same length?"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tube_length_radio_group_pdf"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="YES"/>
+                        <ImageView
+                            android:id="@+id/tube_length_image_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/report_tube2">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="Do the tubes have any issues\n such as discoloration, scratching or physical damage?"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/issue_tube_radio_group_pdf"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="YES"/>
+                        <ImageView
+                            android:id="@+id/issue_tube_image_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="are parts oriented in that same direction in all the tubes?"
+                            />
+
+                        <TextView
+                            android:id="@+id/driection_tube_radio_pdf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="YES"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/direction_tube_image_pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="are quantity consistent in all tubes?"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/quantity_tubes_radio_group_pdf"
+                            android:text="YES"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="46dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_gradient_drawable"
+                android:paddingLeft="140dp"
+                android:paddingTop="10dp"
+                android:paddingRight="140dp"
+                android:paddingBottom="10dp"
+                android:text="Download PDF"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

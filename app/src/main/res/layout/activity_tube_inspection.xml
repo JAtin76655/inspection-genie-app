@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/ic_extended_screen_background"
+    tools:context=".Inspection.TubeInspectionActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TUBE INSPECTION"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/raleway_bold"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Does the manufacturer's name or logo\n
+                appear to be on the tube?"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="218dp"
+                        android:layout_height="85dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/logo_tube_radio_group"
+                            android:layout_width="201dp"
+                            android:layout_height="37dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:text="@string/part_number"
+                            android:textAllCaps="true">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textSize="@dimen/_10sdp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/logo_tube_image"
+                        android:layout_width="113dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_bg_edittext"
+                        android:hint="@string/height_in_inches"
+                        android:src="@drawable/ic_add"
+                        android:textAllCaps="true" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="all tubes are the same length?"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="218dp"
+                        android:layout_height="85dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/tube_length_radio_group"
+                            android:layout_width="201dp"
+                            android:layout_height="37dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:text="@string/part_number"
+                            android:textAllCaps="true">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textSize="@dimen/_10sdp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/tube_length_image"
+                        android:layout_width="112dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_bg_edittext"
+                        android:hint="@string/height_in_inches"
+                        android:src="@drawable/ic_add"
+                        android:textAllCaps="true" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Do the tubes have any issues\n such as discoloration, scratching or physical damage?"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="218dp"
+                        android:layout_height="85dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/issue_tube_radio_group"
+                            android:layout_width="201dp"
+                            android:layout_height="37dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:text="@string/part_number"
+                            android:textAllCaps="true">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textSize="@dimen/_10sdp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/issue_tube_image"
+                        android:layout_width="108dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_bg_edittext"
+                        android:hint="@string/height_in_inches"
+                        android:src="@drawable/ic_add"
+                        android:textAllCaps="true" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_tube_damage"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/shape_bg_edittext"
+                    android:fontFamily="@font/raleway"
+                    android:hint="please specify here"
+                    android:padding="10dp"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/text_size" />
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="are parts oriented in that same direction in all the tubes?"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="218dp"
+                        android:layout_height="85dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/driection_tube_radio_group"
+                            android:layout_width="201dp"
+                            android:layout_height="69dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:text="@string/part_number"
+                            android:textAllCaps="true">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textSize="@dimen/_10sdp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/direction_tube_image"
+                        android:layout_width="111dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_bg_edittext"
+                        android:hint="@string/height_in_inches"
+                        android:src="@drawable/ic_add"
+                        android:textAllCaps="true" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="are quantity consistent in all tubes?"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+
+                <RadioGroup
+                    android:id="@+id/quantity_tubes_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:text="@string/part_number"
+                    android:textAllCaps="true">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:gravity="center"
+                        android:text="@string/no"
+                        android:textSize="@dimen/_10sdp" />
+                </RadioGroup>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_nxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="46dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/btn_gradient_drawable"
+                android:paddingLeft="140dp"
+                android:paddingTop="10dp"
+                android:paddingRight="140dp"
+                android:paddingBottom="10dp"
+                android:text="NEXT STEP"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

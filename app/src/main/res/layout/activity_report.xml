@@ -1,0 +1,1999 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_back_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@id/back_page"
+                android:text="INSPECTION REPORT"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:id="@+id/ins_page"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:src="@drawable/inspection_genie"/>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/report_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="RECEIVED PACKAGE IMAGES"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/iv_topView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/top_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/iv_bottomView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/bottom_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/iv_leftView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/left_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/iv_rightView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/rightview"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/iv_frontView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="FRONT VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/iv_backview"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="BACK VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="WEIGHT AND DIMENSIONS"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="WEIGHT :"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txt_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="LENGTH :"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txt_length"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="HEIGHT :"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txt_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="WIDTH :"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txt_width"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/iv_scaleview"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Scale/Weight Picture"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/iv_measure"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Package Measurements In Inches"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="PACKAGE INTERIOR"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/iv_package_interoier"
+                            android:layout_width="match_parent"
+                            android:layout_height="450dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Does this package contain test reports?"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_5sdp"
+                        />
+                    <TextView
+                        android:id="@+id/txt_package_report"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="YES"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="PACKING SLIP"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/iv_package_slip"
+                            android:layout_width="match_parent"
+                            android:layout_height="450dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="CONDITION OF LINE ITEMS"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/cd_iv_topView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/top_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/cd_iv_bottomView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/bottom_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/cd_iv_leftView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/left_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/cd_iv_rightView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/rightview"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/cd_iv_frontView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="FRONT VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/cd_iv_backview"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="BACK VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="MANUFACTURER LABEL"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true">
+
+
+                        <ImageView
+                            android:id="@+id/iv_manufautre_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="450dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:hint="@string/height_in_inches"
+                            android:src="@drawable/ic_add"
+                            android:textAllCaps="true" />
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="DETERMINE PARTS"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dp_mbb_bag"
+                    android:text="Do parts come in a MBB/ESD Bag?"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/punctures_bag_radio"
+                        android:text="YES"
+                        android:layout_toRightOf="@+id/dp_mbb_bag"
+                        android:textStyle="bold"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/type_dp"
+                    android:text="Please Select"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/type_radio"
+                    android:text="TUBE"
+                    android:layout_toRightOf="@+id/type_dp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dp_puncturebag"
+                    android:text="Is there any punctures in bag?"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/puncture_bag_radio"
+                    android:text="YES"
+                    android:layout_toRightOf="@+id/dp_puncturebag"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@color/table_header"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Take picture of bag seal and bag overall"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivBagSealImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg_edittext"
+                    android:hint="@string/height_in_inches"
+                    android:src="@drawable/ic_add"
+                    android:textAllCaps="true" />
+
+                <ImageView
+                    android:id="@+id/bag_overall_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg_edittext"
+                    android:hint="@string/height_in_inches"
+                    android:src="@drawable/ic_add"
+                    android:textAllCaps="true"
+                    tools:ignore="DuplicateIds" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dp_msl_sticker"
+                    android:text="Is there a MSL sticker?"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/msl_sticker"
+                    android:text="YES"
+                    android:layout_toRightOf="@+id/dp_msl_sticker"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dp_digi_key"
+                    android:text="Is the MSL for the parts correct \nand confirmed
+with the data sheet or Digi-Key?"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/digi_key"
+                    android:text="YES"
+                    android:layout_toRightOf="@+id/dp_digi_key"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/dp_hic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Is there any HIC card and desiccant?" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hic_card"
+                    android:text="YES"
+                    android:layout_toRightOf="@+id/dp_hic"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@color/table_header"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/open_bag_take_picture_of_part_resting"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:id="@+id/ii_open_bag"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg_edittext"
+                    android:hint="@string/height_in_inches"
+                    android:src="@drawable/ic_add"
+                    android:textAllCaps="true" />
+
+
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_send_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_gradient_drawable"
+                android:paddingLeft="90dp"
+                android:paddingTop="10dp"
+                android:paddingRight="90dp"
+                android:paddingBottom="10dp"
+                android:text="Send Mail"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/report_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/package_receive_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RECEIVED PACKAGE IMAGES"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="15dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_topView_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/top_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_bottomView_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/bottom_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_leftView_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/left_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_rightView_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/rightview"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_frontView_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="FRONT VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_backView_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="BACK VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/weight_dimension_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="WEIGHT AND DIMENSIONS"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"/>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="WEIGHT :"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:id="@+id/txt_weight_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_marginLeft="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="LENGTH :"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/txt_length_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="HEIGHT :"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:id="@+id/txt_height_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_marginLeft="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="WIDTH :"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/txt_width_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_scaleview_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/scale_weight_picture"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="6sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_measure_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="Package Measurements"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="6sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"/>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="PACKAGE INTERIOR"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                        <ImageView
+                            android:id="@+id/iv_package_interoier_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="Does this package contain test reports?"
+                                android:textColor="@color/grey"
+                                android:textSize="6sp"
+                                />
+                            <TextView
+                                android:id="@+id/txt_package_report_pdf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YES"
+                                android:textColor="@color/black"
+                                android:textSize="6sp" />
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textAlignment="center"
+                            android:text="PACKAGE SLIP"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_package_slip_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/condition_items_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONDITION OF LINE ITEMS"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="15dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_topView_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/top_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_bottomView_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/bottom_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_leftView_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/left_view"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_rightView_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/rightview"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_frontView_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="FRONT VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/blue_border_report"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/cd_iv_backview_pdf"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="2dp"
+                            android:src="@drawable/weight_package"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="BACK VIEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/manufature_label_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="MANUFACTURER LABEL"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/blue_border_report"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/iv_manufautre_label_pdf"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:padding="2dp"
+                        android:src="@drawable/weight_package" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:text="DETERMINE PARTS"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dp_mbb_bag_pdf"
+                        android:text="Do parts come in a MBB/ESD Bag?"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/punctures_bag_radio_pdf"
+                        android:text="YES"
+                        android:layout_toRightOf="@+id/dp_mbb_bag_pdf"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/type_dp_pdf"
+                        android:text="Please Select"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/type_radio_pdf"
+                        android:text="TUBE"
+                        android:layout_toRightOf="@+id/type_dp_pdf"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dp_puncturebag_pdf"
+                        android:text="Is there any punctures in bag?"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/puncture_bag_radio_pdf"
+                        android:text="YES"
+                        android:layout_toRightOf="@+id/dp_puncturebag_pdf"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Take picture of bag seal and bag overall"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivBagSealImagePdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_border_report"
+                        android:hint="@string/height_in_inches"
+                        android:src="@drawable/ic_add"
+                        android:textAllCaps="true" />
+
+                    <ImageView
+                        android:id="@+id/bag_overall_image_Pdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_border_report"
+                        android:hint="@string/height_in_inches"
+                        android:src="@drawable/ic_add"
+                        android:textAllCaps="true"
+                        tools:ignore="DuplicateIds" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dp_msl_sticker_pdf"
+                        android:text="Is there a MSL sticker?"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/msl_sticker_pdf"
+                        android:text="YES"
+                        android:layout_toRightOf="@+id/dp_msl_sticker_pdf"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dp_digi_key_pdf"
+                        android:text="Is the MSL for the parts correct \nand confirmed
+with the data sheet or Digi-Key?"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/digi_key_pdf"
+                        android:text="YES"
+                        android:layout_toRightOf="@+id/dp_digi_key_pdf"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/dp_hic_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Is there any HIC card and desiccant?" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hic_card_pdf"
+                        android:text="YES"
+                        android:layout_toRightOf="@+id/dp_hic_pdf"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/table_header"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Open bag take picture of part resting."
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:id="@+id/ii_open_bag_pdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_border_report"
+                        android:hint="@string/height_in_inches"
+                        android:src="@drawable/ic_add"
+                        android:textAllCaps="true" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

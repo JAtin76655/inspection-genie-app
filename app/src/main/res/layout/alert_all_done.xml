@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:padding="45dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/all_done"
+        android:textAllCaps="true"
+        android:textColor="@color/btn_text"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="152dp"
+        android:layout_height="152dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/ic_tick"
+        />
+
+    <Button
+        android:id="@+id/btn_goHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_gradient_drawable"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="10dp"
+        android:text="HOME"
+        android:drawableLeft="@drawable/ic_baseline_home_24"
+        android:drawablePadding="10dp"
+        android:onClick="nextButton"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        tools:ignore="OnClick" />
+
+
+</LinearLayout>

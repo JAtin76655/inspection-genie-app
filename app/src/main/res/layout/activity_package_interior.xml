@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_extended_screen_background"
+    tools:context=".Inspection.PackageInteriorActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@id/back_page"
+                android:gravity="center"
+                android:text="PACKAGE INTERIOR"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="650dp"
+                android:layout_weight="1"
+                android:elevation="10dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginLeft="@dimen/_70sdp"
+                android:layout_marginRight="@dimen/_70sdp"
+                android:layout_marginTop="10dp"
+                app:cardUseCompatPadding="true">
+
+
+                <ImageView
+                    android:id="@+id/package_interior_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="660dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_bg_edittext"
+                    android:hint="@string/height_in_inches"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_add"
+                    android:textAllCaps="true" />
+
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_6sdp"
+                android:text="Image of the Interior, before products are removed"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_addmore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_white_drawable_radius_less"
+                android:paddingLeft="90dp"
+                android:paddingTop="10dp"
+                android:paddingRight="90dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                android:text="ADD MORE IMAGE"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_8sdp"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="@color/table_header"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Does this package contain test reports?"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <RadioGroup
+                        android:id="@+id/packae_report_radio_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:text="@string/part_number"
+                        android:textAllCaps="true">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_40sdp"
+                            android:gravity="center"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="@string/no" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="@color/table_header"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Quantity of individual part number contained in the package"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_5sdp">
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:padding="5dp"
+                            android:text="Part number 1"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <EditText
+                            android:id="@+id/fact_tubes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:fontFamily="@font/raleway"
+                            android:hint="000.00"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/_10sdp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:padding="5dp"
+                            android:text="Part number 2"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <EditText
+                            android:id="@+id/partial_tubes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:fontFamily="@font/raleway"
+                            android:hint="000.00"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/_10sdp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:padding="5dp"
+                            android:text="Part Number 3"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <EditText
+                            android:id="@+id/count_partial_tubs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/shape_bg_edittext"
+                            android:fontFamily="@font/raleway"
+                            android:hint="000.00"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/_10sdp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/half_black"
+                        android:padding="2dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="Total Quantity"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:id="@+id/tubes_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="000.00"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_nxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="46dp"
+                android:background="@drawable/btn_gradient_drawable"
+                android:paddingLeft="140dp"
+                android:paddingTop="10dp"
+                android:paddingRight="140dp"
+                android:paddingBottom="10dp"
+                android:text="NEXT STEP"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

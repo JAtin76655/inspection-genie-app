@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_extended_screen_background"
+    tools:context=".Inspection.PackingSlipActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@id/back_page"
+                android:gravity="center"
+                android:text="MANUFACTURER LABEL"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="650dp"
+                android:layout_weight="1"
+                android:elevation="10dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginLeft="@dimen/_70sdp"
+                android:layout_marginRight="@dimen/_70sdp"
+                android:layout_marginTop="10dp"
+                app:cardUseCompatPadding="true">
+
+
+                <ImageView
+                    android:id="@+id/manufature_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="660dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_bg_edittext"
+                    android:hint="@string/height_in_inches"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_add"
+                    android:textAllCaps="true" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_addmore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_white_drawable_radius_less"
+                android:paddingLeft="90dp"
+                android:paddingTop="10dp"
+                android:paddingRight="90dp"
+                android:paddingBottom="10dp"
+                android:text="ADD MORE IMAGE"
+                android:visibility="gone"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_8sdp"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_nxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="46dp"
+                android:background="@drawable/btn_gradient_drawable"
+                android:paddingLeft="140dp"
+                android:paddingTop="10dp"
+                android:paddingRight="140dp"
+                android:paddingBottom="10dp"
+                android:text="NEXT STEP"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
